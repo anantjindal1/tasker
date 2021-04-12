@@ -1,9 +1,11 @@
 package com.anant.tasker.models;
 
-public class Task {
-    public String ID,Name,Tags,Duedate,location_id,Category,Project_id,Group_id,notes;
+import java.util.List;
 
-    public Task(String ID, String name, String tags, String duedate, String location_id, String category, String project_id, String group_id, String notes) {
+public class Task {
+    public String ID,Name,Tags,Duedate,location_id,Category,Project_id, board_id,notes;
+
+    public Task(String ID, String name, String tags, String duedate, String location_id, String category, String project_id, String board_id, String notes) {
         this.ID = ID;
         Name = name;
         Tags = tags;
@@ -11,11 +13,23 @@ public class Task {
         this.location_id = location_id;
         Category = category;
         Project_id = project_id;
-        Group_id = group_id;
+        this.board_id = board_id;
         this.notes = notes;
 
     }
 
+    public Task(String ID, String name, String project_id, String board_id) {
+        this.ID = ID;
+        Name = name;
+        title = name;
+        Project_id = project_id;
+        this.board_id = board_id;
+    }
+
+    public int age, priority;
+    public String title, description, task_status, due_date, loc_lat, loc_long, created_at,updated_at,used_id,completed_at, tag;
+    List<Task> pre_requisites;
+    Board board;
     /**
      *   "id" bigint NOT NULL,
      *     "title" character varying NOT NULL,

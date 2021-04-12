@@ -1,6 +1,10 @@
 package com.anant.tasker.models;
 
 public class Contact {
+
+    int id;
+    String name, email, phone, address, company, department, created_at, updated_at;
+    int user_id;
     /**
      *  "id" bigint NOT NULL,
      *     "name" character varying NOT NULL,

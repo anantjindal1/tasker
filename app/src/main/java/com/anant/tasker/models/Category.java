@@ -2,6 +2,10 @@ package com.anant.tasker.models;
 
 public class Category {
 
+    int id, category_id, task_id;
+    String cat_values;
+    String created_at, updated_at;
+
     /**
      *      "id" bigint NOT NULL,
      *     "category_id" integer NOT NULL,
